@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 :root {
+  --pastel-pink: #f8c8d9;
+  --pastel-lavender: #d6aefb;
+  --pastel-peach: #ffb3b3;
   --neon-blue: #00ffff;
   --neon-green: #39ff14;
 }
 
 @layer base {
   body {
-    @apply antialiased;
+    @apply antialiased bg-gradient-to-r from-[#fdfdfd] to-[#f2f1f9];
+    font-family: 'Poppins', sans-serif; /* Elegant, rounded, clean font */
   }
 }
 
@@ -22,12 +26,40 @@
     color: var(--neon-green);
   }
 
+  .text-pastel-pink {
+    color: var(--pastel-pink);
+  }
+
+  .text-pastel-lavender {
+    color: var(--pastel-lavender);
+  }
+
+  .text-pastel-peach {
+    color: var(--pastel-peach);
+  }
+
+  .bg-pastel-pink {
+    background-color: var(--pastel-pink);
+  }
+
+  .bg-pastel-lavender {
+    background-color: var(--pastel-lavender);
+  }
+
+  .bg-pastel-peach {
+    background-color: var(--pastel-peach);
+  }
+
   .bg-neon-blue {
     background-color: var(--neon-blue);
   }
 
   .bg-neon-green {
     background-color: var(--neon-green);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .shadow-neon-blue {
@@ -57,4 +89,3 @@
     transform: translateY(0);
   }
 }
-
