@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --neon-blue: #00ffff;
-  --neon-green: #39ff14;
+  --bright-pink: #ff69b4;
+  --bright-yellow: #ffeb3b;
+  --bright-blue: #00bcd4;
+  --bright-green: #8bc34a;
 }
 
 @layer base {
@@ -15,27 +17,27 @@
 
 @layer utilities {
   .text-neon-blue {
-    color: var(--neon-blue);
+    color: var(--bright-pink);
   }
 
   .text-neon-green {
-    color: var(--neon-green);
+    color: var(--bright-yellow);
   }
 
   .bg-neon-blue {
-    background-color: var(--neon-blue);
+    background-color: var(--bright-pink);
   }
 
   .bg-neon-green {
-    background-color: var(--neon-green);
+    background-color: var(--bright-yellow);
   }
 
   .shadow-neon-blue {
-    box-shadow: 0 0 10px var(--neon-blue);
+    box-shadow: 0 0 10px var(--bright-pink);
   }
 
   .bg-hero-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff69b4' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
   .animate-fade-in {
@@ -50,11 +52,42 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/* Tailwind + Custom Styles */
+@layer components {
+  .chatbot-container {
+    background-color: #f8bbd0; /* Light pink */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  .chatbot-button {
+    background-color: #ff4081; /* Pink button */
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  .chatbot-message-user {
+    color: #ff4081; /* Pink user messages */
+    font-weight: bold;
+  }
+  .chatbot-message-bot {
+    color: #7e57c2; /* Light purple bot responses */
+  }
+  .chatbot-input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 1rem;
+    border: 1px solid #ff4081; /* Pink border */
   }
 }
 
